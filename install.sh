@@ -24,7 +24,7 @@ unzip -q "$TMP_DIR/etcher.zip" -d "$TMP_DIR"
 # Move to /opt
 echo "==> Installing to $INSTALL_DIR..."
 sudo rm -rf "$INSTALL_DIR"
-sudo mv "$TMP_DIR/balenaEtcher-linux-x64-${VERSION}" "$INSTALL_DIR"
+sudo mv "$TMP_DIR/balenaEtcher-linux-x64" "$INSTALL_DIR"
 
 # Download icon
 echo "==> Fetching icon..."
@@ -36,7 +36,7 @@ sudo ln -sf "$INSTALL_DIR/balena-etcher" "$BIN_LINK"
 
 # Desktop entry
 echo "==> Creating desktop entry..."
-sudo tee "$DESKTOP_FILE" > /dev/null <<EOF
+sudo tee "$DESKTOP_FILE" > /dev/null <<DESKTOP
 [Desktop Entry]
 Name=balenaEtcher
 Exec=$INSTALL_DIR/balena-etcher
@@ -44,7 +44,7 @@ Icon=$INSTALL_DIR/etcher.png
 Type=Application
 Categories=Utility;
 Comment=Flash OS images to SD cards and USB drives
-EOF
+DESKTOP
 
 sudo update-desktop-database
 
