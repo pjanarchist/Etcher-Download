@@ -1,8 +1,8 @@
-# Etcher-Download
+# Script to install balena etcher
 
 A simple install script for [balenaEtcher](https://etcher.balena.io/) on Linux (Arch/x64).
-
-Downloads, installs, and sets up balenaEtcher system-wide without using a package manager.
+I made it because somehow the pacman version wasn't working on my Arch.
+You can use this script if yours does the same.
 
 ## Install
 
