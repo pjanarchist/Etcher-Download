@@ -9,8 +9,8 @@ You can use this script if yours does the same.
 ```bash
 git clone git@github.com:pjanarchist/Etcher-Download.git
 cd Etcher-Download
-chmod +x install-etcher.sh
-./install-etcher.sh
+chmod +x install.sh
+./install.sh
 ```
 
 ## What it does
