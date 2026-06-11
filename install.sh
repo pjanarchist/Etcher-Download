@@ -14,12 +14,13 @@ echo "==> Installing balenaEtcher v${VERSION}"
 
 # Download
 echo "==> Downloading..."
+rm -rf "$TMP_DIR"
 mkdir -p "$TMP_DIR"
 wget -q --show-progress -O "$TMP_DIR/etcher.zip" "$URL"
 
 # Extract
 echo "==> Extracting..."
-unzip -q "$TMP_DIR/etcher.zip" -d "$TMP_DIR"
+unzip -oq "$TMP_DIR/etcher.zip" -d "$TMP_DIR"
 
 # Move to /opt
 echo "==> Installing to $INSTALL_DIR..."
